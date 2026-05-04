@@ -44,3 +44,19 @@ To run the agent, you need to run the program using ```python main.py``` in the 
 ## Group member contributions
 
 This project was made by me (Claus Peter Jørgensen)
+
+
+
+# Reflection
+
+## What worked well?
+
+## What failed or was unreliable?
+
+## How often did the agent need tool calls?
+
+## Did the LLM ever hallucinate?
+
+## How did you prevent incorrect answers?
+
+## What would you improve with more time?

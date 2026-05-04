@@ -6,10 +6,9 @@ def main():
         assistant,
         message=
         """
-            Find a paper about LLM agents for software engineering
-            published after 2022 with at least 100 citations.
+            Find a research paper about LLM agents for software engineering that was published after 2022 and has at least 100 citations. Explain why the paper is relevant and provide the source of the citation count.
         """,
-        max_turns=5
+        max_turns=2
     )
 
 
