@@ -37,9 +37,3 @@ register_function(
     name="search_papers",
     description="Search for research papers by topic",
 )
-
-if __name__ == "__main__":
-    user_proxy.initiate_chat(
-        assistant,
-        message="Find a research paper about LLM agents for software engineering that was published after 2022 and has at least 100 citations. Explain why the paper is relevant and provide the source of the citation count."
-    )
