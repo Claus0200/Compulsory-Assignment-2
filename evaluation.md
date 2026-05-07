@@ -192,6 +192,6 @@ Average explanation quality:      3.10
 
 ## Discussion
 
-The evaluation results also show that the agent performed best in source_validity, which suggests that using external tools such as OpenAlex helped reduce hallucinations regarding DOI links and research paper sources. However, the lower scores in relevance and constraint_satisfaction indicate that the agent still struggled with correctly interpreting the user’s intent and applying all constraints consistentl
+The evaluation results also show that the agent performed best in source_validity, which suggests that using external tools such as OpenAlex helped reduce hallucinations regarding DOI links and research paper sources. However, the lower scores in relevance and constraint_satisfaction indicate that the agent still struggled with correctly interpreting the user’s intent and applying all constraints consistently
 
 The external evaluation can most of the time also be very unreliable, because even the external judge can hallucinate and be wrong. A improvement would be to introduce multiple evaluation agents and compare their scores. If several judges independently agree on the evaluation, the results would likely become more stable and less affected by hallucinations from a single model.
