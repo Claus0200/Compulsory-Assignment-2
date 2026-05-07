@@ -1,10 +1,9 @@
 from autogen import AssistantAgent, UserProxyAgent, register_function
-
 from research_agent.config import LLM_CONFIG
 from research_agent.tools.research_tool import search_papers
 
 
-assistant = AssistantAgent(
+research_agent = AssistantAgent(
     name="ResearchAgent",
     llm_config=LLM_CONFIG,
     system_message="""
@@ -42,7 +41,7 @@ Important rules:
 - NEVER assume or invent citations or papers
 - ONLY use tool results
 - If tool returns empty list, say: "No papers found that satisfy the constraints."
-- If multiple papers match, choose the one with most relevant topic, publication date, and highest citationCount
+- If multiple papers match, choose the one with most relevant topic.
 
 -----------------------------
 YOUR TASK
@@ -97,13 +96,14 @@ user_proxy = UserProxyAgent(
     name="UserProxy",
     human_input_mode="NEVER",
     code_execution_config=False,
+    
 )
 
-# Register tool
+# Register the tool function
 register_function(
     search_papers,
-    caller=assistant,
+    caller=research_agent,
     executor=user_proxy,
     name="search_papers",
-    description="Search for research papers by topic",
+    description="Search for research papers"
 )
